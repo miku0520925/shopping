@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    background-color: #f4a7b9;
+    width: 100vw;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-grow: 3;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* 調整高度以確保填滿屏幕 */
+}
+
+nav {
+    background-color: #D6CCC2;
+    text-align: right;
+    padding: 10px 0;
+}
+
+nav a {
+    color: black;
+    padding: 20px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.container {
+    background-color: gainsboro;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 分散排列，確保每行有三個卡片 */
+    width: auto;
+    height: 100%;
+    margin: 0;
+}
+
+.profile-card {
+    background-color: #f4a7b9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px;
+    flex: 1 1 calc(33% - 20px); /* 設置卡片寬度，確保每行三個卡片 */
+    box-sizing: border-box; /* 確保padding和border不會影響寬度計算 */
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.1); /* 當鼠標懸停時放大卡片 */
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: none; /* 初始隱藏 */
+}
+
+.profile-card:hover .profile-info {
+    display: block; /* 當鼠標懸停時顯示 */
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+button {
+    background-color: #D6CCC2;
+    color: black;
+    font-family: 'Noto Serif TC', serif;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 500px;
+    height: 40px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: gray;
+    color: white;
+}
