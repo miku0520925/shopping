@@ -1,114 +1,135 @@
-html,body{
+html,
+body {
     margin: 0;
     height: 100%;
 
     line-height: 1.5;
 }
 
-header,main,footer{
+header,
+main,
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header{
+header {
     background-color: gainsboro;
     flex-grow: 1;
     width: 100%;
 }
 
-main{
-    background-color:rgb(182, 182, 182);
-    flex-grow:5;
-    width: 90vw;
+main {
+    background-color: #f4a7b9;
+    flex-grow: 5;
+    width: 100vw;
 
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
 }
 
-footer{
+footer {
     background-color: aquamarine;
     flex-grow: 2;
     width: 100%;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    /* height: 100%; */
     width: 100%;
 }
 
 
-.data{
+.data {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
     width: 100%;
 }
 
-.formstyle{
+.formstyle {
     margin: 5px 10px 10px;
     padding: 5px 20px 20px;
     width: 80%;
     max-width: 1200px;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow:1px 2px 2px rgba(0, 0, 0, 0.036);
+    background-color: #fedfe1;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.036);
 
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.mydata{
-    margin:10px 10px 0px;
-    padding:20px 20px 0px;
-    display: flex;
-    justify-content: left;
-    
-    width:80%
+h1 {
+    text-align: center;
 }
 
-h1{
-    width: 45%;
-    border-bottom: 0.5px solid #efefef;
-}
-
-table{
+table {
     width: 100%;
     border-collapse: collapse;
-    
 }
 
-td{
+td {
     padding: 10px;
-    
+
 }
 
-.tpdc{
+.tpdc {
     text-align: right;
 }
 
-input{
+input {
     width: 100%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-input[type="date"]{
+input[type="date"] {
     width: 100%;
     padding: 8px;
-    box-sizing: border-box; /* 確保內邊距不會影響元素總寬度 */
+    box-sizing: border-box;
+    /* 確保內邊距不會影響元素總寬度 */
 }
 
-input[type="submit"]{
-    width: 30%;
+button {
+    width: 50%;
+    background-color: #f4a7b9;
+    border: 0px;
+    border-radius: 5px;
+    transform: scale(1.4);
+}
+button:hover{
+    background-color:#b57b88;
+}
+button:active{
+    background-color: #f4a7b9;
+    transform: scale(0.95);
+}
+
+
+@media (max-width:768px) {
+    body{
+        line-height: 1.8;
+    }
+    .data{
+        background-color: #fedfe1;
+    }
+    .tpdc{
+        width: 40%;
+    }
+    td,input{
+        padding: 5px;
+    }
+    button{
+        transform: scale(2);
+    }
 }
