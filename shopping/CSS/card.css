@@ -7,7 +7,6 @@ html, body {
 
 main {
     background-color: #f4a7b9;
-    width: 100vw;
     padding: 20px;
     margin: 0 auto;
     display: flex;
@@ -39,14 +38,19 @@ nav a:hover {
     background-color: gainsboro;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* 分散排列，確保每行有三個卡片 */
-    width: auto;
+    justify-content: center;
+    max-width: 1800px;
+    width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 40px;
+    padding: 20px;
 }
 
+/* 個人介紹 */
 .profile-card {
     background-color: #f4a7b9;
+    height: 400px;
+    max-height: 800px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,25 +58,36 @@ nav a:hover {
     margin: 50px;
     flex: 1 1 calc(33% - 20px); /* 設置卡片寬度，確保每行三個卡片 */
     box-sizing: border-box; /* 確保padding和border不會影響寬度計算 */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1s ease-in-out; /* 合併transition屬性 */
+    transition-delay: 0.5s; /* 鼠標移開時延遲縮小 */
+    
 }
 
 .profile-card:hover {
     transform: scale(1.1); /* 當鼠標懸停時放大卡片 */
+    transition-delay: 0s; /* 鼠標懸停時立即放大 */
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .profile-info {
     display: none; /* 初始隱藏 */
+    transition: opacity 1s ease-in-out; /* 添加顯示動畫時間為1秒 */
+    opacity: 0; /* 初始透明 */
 }
 
 .profile-card:hover .profile-info {
     display: block; /* 當鼠標懸停時顯示 */
+    opacity: 1; /* 使其顯示 */
+}
+
+.profile-card .profile-info {
+    transition-delay: 0.2s; /* 鼠標移開時延遲隱藏 */
 }
 
 .icon {
