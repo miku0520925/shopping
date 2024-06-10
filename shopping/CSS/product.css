@@ -71,8 +71,17 @@ nav a {
 
 .product-image {
     margin-right: 2em;
+    max-width: 800px;
+    max-height: 800px;
+    overflow: hidden;
 }
 
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* 按鈕 */
@@ -116,4 +125,30 @@ button[type="submit"], button[type="button"] {
 button[type="submit"]:hover, button[type="button"]:hover {
     background-color: #e41464;
     
+}
+
+
+
+/* 手機 */
+@media (min-width: 600px) {
+    .product-container {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .product-image {
+        margin-right: 2em;
+        max-width: 50%;
+        max-height: 800px;
+        margin-bottom: 0;
+    }
+
+    .product {
+        width: 50%;
+    }
+
+    button[type="submit"], button[type="button"] {
+        width: 200px;
+        margin-top: 0;
+    }
 }
